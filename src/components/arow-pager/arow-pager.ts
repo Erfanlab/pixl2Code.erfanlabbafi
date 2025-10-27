@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { Component, input, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-arow-pager',
@@ -7,8 +6,13 @@ import { interval } from 'rxjs';
   templateUrl: './arow-pager.html',
   styleUrl: './arow-pager.scss'
 })
-export class ArowPager implements OnInit {
-  ngOnInit(): void {
-    console.log('erfan');
-  }
+export class ArowPager {
+
+
+  title = input<string>('')
+
+
+
+
+
 }
