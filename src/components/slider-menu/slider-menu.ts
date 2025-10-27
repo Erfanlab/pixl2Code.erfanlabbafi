@@ -12,4 +12,7 @@ export class SliderMenu {
   imgUrl = input<string>('')
   descrioption = input.required<string>()
 
+
+
 }
+

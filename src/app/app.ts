@@ -33,14 +33,34 @@ paraphrase = signal('Less design, more code!');
 
 loadpage = signal<boolean>(true);
 
-ngOnInit(){
-  setInterval(() =>{
-    this.titleTime.update(prev => prev + 1);
-    this.paraphrase.update(prev => prev = 'Your, Welcome');
-  },3000);
-  setInterval(() => {
-    this.loadpage.set( false )
-  },6000);
+setItem(key : string , value: any){
+  localStorage.setItem(key, JSON.stringify(value))
+} 
+ 
+ getItem<T>(key: string): T | null {
+    const item = localStorage.getItem(key);
+    return item ? JSON.parse(item) as T : null;
+  }
 
+  
+  
+  
+  ngOnInit(){
+    const user = this.getItem<{ See: boolean }>('welcome-page');
+    
+    if (!user){
+      setInterval(() =>{
+        this.titleTime.update(prev => prev + 1);
+        this.paraphrase.update( () =>  'Your, Welcome');
+      },3000);
+      setInterval(() => {
+        this.loadpage.set( false )
+        this.setItem('welcome-page', { See: true });
+      },6000);
+      
+    }else{
+      this.loadpage.set( false )
+      
+    }
 }
 }
