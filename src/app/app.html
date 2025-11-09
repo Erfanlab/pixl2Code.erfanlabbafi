@@ -1,10 +1,12 @@
+@if(lostConection()){
+    <app-lost-conection (gotohome)="CloseModal()" />
+}
 @if(loadpage()){
     <app-arow-pager  [title]="paraphrase()" />   
     <app-time-load class=" w-full absolute bottom-0 flex justify-center items-center"/>
 } @else {
     <div class=" flex flex-col lg:flex-row w-full overflow-auto ">
-        @for (item of items(); track item.id; let i = $index) {
-            <app-slider-menu class=" w-full h-screen"  [title]="item.title" [descrioption]="item.description" [imgUrl]="item.imgUrl" />
-        }
+            <app-slider-menu (next)="nextSlider()" class=" w-full h-screen"  [title]="items()[this.numberslider()].title" [descrioption]="items()[this.numberslider()].description" [imgUrl]="items()[this.numberslider()].imgUrl" />
+        
     </div>
 }
