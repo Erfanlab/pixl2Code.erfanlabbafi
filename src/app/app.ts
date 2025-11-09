@@ -2,12 +2,16 @@ import { Component, signal } from '@angular/core';
 import { ArowPager } from '../components/arow-pager/arow-pager';
 import { TimeLoad } from '../components/time-load/time-load';
 import { SliderMenu } from "../components/slider-menu/slider-menu";
+import { LostConection } from '../components/lostConection/lost-conection';
 
 @Component({
   selector: 'app-root',
-  imports: [ArowPager, TimeLoad, SliderMenu],
+  imports: [ArowPager, TimeLoad, SliderMenu, LostConection],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  host: {
+    class : 'relative flex justify-center items-center'
+  }
 })
 export class App  {
   items= signal([
@@ -23,8 +27,93 @@ export class App  {
       description:'frist decription',
       imgUrl:'/assets/appImg/css.png'
 
+    },
+    {
+      id:2,
+      title:'learn angular', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/angular.png'
+
+    },
+    {
+      id:3,
+      title:'learn bootstrap', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/bootstrap.png'
+
+    },
+    {
+      id:4,
+      title:'learn dribble', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/dribble.png'
+
+    },
+    {
+      id:5,
+      title:'learn figma', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/figma.png'
+
+    },
+    {
+      id:6,
+      title:'learn git', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/git.png'
+
+    },
+    {
+      id:7,
+      title:'learn github', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/github.png'
+
+    },
+    {
+      id:8,
+      title:'learn html', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/html.png'
+
+    },
+    {
+      id:9,
+      title:'learn react', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/react.png'
+
+    },
+    {
+      id:10,
+      title:'learn typescript', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/typescript.png'
+
+    },
+    {
+      id:11,
+      title:'learn ICON-VIP', 
+      description:'frist decription',
+      imgUrl:'/assets/appImg/ICON-VIP.png'
+
     }
   ])
+numberslider = signal<number>(0);
+nextSlider(){
+  console.log('sss')
+  this.numberslider.set(this.numberslider() + 1);
+  }
+
+
+
+  lostConection = signal<boolean>(false);
+
+CloseModal(){
+  this.lostConection.set(false);
+
+}
+
 
   protected readonly title = signal('pixl2code');
 

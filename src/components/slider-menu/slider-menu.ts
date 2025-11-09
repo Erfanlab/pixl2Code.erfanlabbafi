@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-slider-menu',
@@ -12,7 +12,7 @@ export class SliderMenu {
   imgUrl = input<string>('')
   descrioption = input.required<string>()
 
-
+  next = output<void>()
 
 }
 

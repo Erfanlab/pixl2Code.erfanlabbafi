@@ -1,6 +1,7 @@
 <div class="h-screen flex flex-col gap-1 justify-center items-center cursor-pointer">
     <img src="{{imgUrl()}}" width="200" alt="">
-    <div class=" flex flex-col gap-2">
+    <div class=" flex flex-col gap-2 relative">
+        <div class=" absolute -right-20 p-5" (click)="next.emit()">></div>
         <div class=" font-bold text-lg text-center">
             {{title()}}
         </div>
