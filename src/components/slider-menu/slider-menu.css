@@ -1,0 +1,1 @@
+.anime{overflow:hidden;animation:identifier 2s;--target: -100%}@keyframes identifier{0%{transform:translateX(0)}100%{transform:translateX(var(--target))}}.anime-prev{overflow:hidden;animation:identifier 2s;--target: 100%}

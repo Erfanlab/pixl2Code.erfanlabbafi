@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, NgModule, signal } from '@angular/core';
 import { ArowPager } from '../components/arow-pager/arow-pager';
 import { TimeLoad } from '../components/time-load/time-load';
 import { SliderMenu } from "../components/slider-menu/slider-menu";
 import { LostConection } from '../components/lostConection/lost-conection';
+import { interval, timeout } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -100,11 +101,35 @@ export class App  {
     }
   ])
 numberslider = signal<number>(0);
+itmesL = signal<number>(this.items().length);
+classList = signal<'prev'|'next' | 'none'>('none');
 nextSlider(){
-  console.log('sss')
-  this.numberslider.set(this.numberslider() + 1);
-  }
+this.classList.set('next');
+setTimeout(() => {
+  if ((this.numberslider()) === this.itmesL()){
+    this.numberslider.set(0);
+    this.classList.set('none');
+  } else {
+    this.numberslider.set(this.numberslider() + 1);
+    this.classList.set('none');
+    }
+  }, 1000);
+}
 
+prevSlider(){
+  this.classList.set('prev');
+  setTimeout(() => {
+    if(this.numberslider() === -1){
+      console.log(this.numberslider())
+      this.numberslider.set(this.itmesL());
+      this.classList.set('none');
+    }else {
+      this.numberslider.set(this.numberslider() - 1 );
+      this.classList.set('none');
+
+    }
+  }, 1000);
+  }
 
 
   lostConection = signal<boolean>(false);
