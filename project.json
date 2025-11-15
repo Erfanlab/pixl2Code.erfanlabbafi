@@ -49,7 +49,25 @@
         "development": {
           "optimization": false,
           "extractLicenses": false,
-          "sourceMap": true
+          "sourceMap": true,
+          "fileReplacements": [
+            {
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.development.ts"
+            }
+          ]
+        },
+        "stage": {
+          "optimization": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.stage.ts"
+            }
+          ]
         }
       },
       "defaultConfiguration": "production",
@@ -65,6 +83,9 @@
         },
         "development": {
           "buildTarget": "pixl2code:build:development"
+        },
+        "stage": {
+          "buildTarget": "pixl2code:build:stage"
         }
       },
       "defaultConfiguration": "development"
