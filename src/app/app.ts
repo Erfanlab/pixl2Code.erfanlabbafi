@@ -1,9 +1,9 @@
-import { Component, NgModule, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ArowPager } from '../components/arow-pager/arow-pager';
 import { TimeLoad } from '../components/time-load/time-load';
 import { SliderMenu } from "../components/slider-menu/slider-menu";
 import { LostConection } from '../components/lostConection/lost-conection';
-import { interval, timeout } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +15,18 @@ import { interval, timeout } from 'rxjs';
   }
 })
 export class App  {
+
+  appUrl = environment.appUrl;
+  apiUrl = environment.apiUrl;
+  
+  constructor(){
+    console.log('App URL:', this.appUrl);
+    console.log('API URL:', this.apiUrl);
+  }
+
+
+
+
   items= signal([
     {
       id:0,
@@ -161,7 +173,9 @@ setItem(key : string , value: any){
   
   ngOnInit(){
     const user = this.getItem<{ See: boolean }>('welcome-page');
-    
+
+
+
     if (!user){
       setInterval(() =>{
         this.titleTime.update(prev => prev + 1);
@@ -177,4 +191,7 @@ setItem(key : string , value: any){
       
     }
 }
+
+
+
 }
