@@ -1,0 +1,17 @@
+@if(lostConection()){
+    <app-lost-conection (gotohome)="CloseModal()" />
+}
+@if(loadpage()){
+    <app-arow-pager  [title]="paraphrase()" />   
+    <app-time-load class=" w-full absolute bottom-0 flex justify-center items-center"/>
+} @else {
+    <div class=" flex flex-col lg:flex-row w-full overflow-auto ">
+            <app-slider-menu (prev)="prevSlider()" (next)="nextSlider()" [classlists]=" classList() ==='next'? 'anime':'' + classList()=== 'prev' ?'anime-prev':'' " class=" w-full h-screen"  [title]="items()[this.numberslider()].title" [descrioption]="items()[this.numberslider()].description" [imgUrl]="items()[this.numberslider()].imgUrl" />
+        
+
+<a href=""></a>
+<a href=""></a>
+
+
+    </div>
+}
