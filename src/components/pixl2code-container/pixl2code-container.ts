@@ -169,6 +169,24 @@ setItem(key : string , value: any){
   
   
   ngOnInit(){
+    const conections = (navigator as any).connection;
+    if (conections){
+      conections.addEventListener('change',() => {
+        if ( conections.effectiveType === '3g'){
+          this.lostConection.set(true)
+        } else {
+          this.lostConection.set(false)
+        }
+      }) 
+    }
+    window.addEventListener('offline',() => {
+      this.lostConection.set(true);
+
+    })
+
+    window.addEventListener("online",() => {
+      this.lostConection.set(false);
+    })
     const user = this.getItem<{ See: boolean }>('welcome-page');
 
 
