@@ -29,7 +29,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: pnpm i
+        run:  npm install
 
       - name: Build Nx app
         run: nx serve pixl2code --configuration:stage
