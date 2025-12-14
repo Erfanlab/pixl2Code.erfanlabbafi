@@ -32,7 +32,7 @@ jobs:
         run:  npm install
 
       - name: Build Nx app
-        run: npx nx build pixl2code --configuration=stage --skip-nx-cache --no-daemon
+        run: npx nx build pixl2code --configuration=stage
 
 
       - name: Setup Pages
