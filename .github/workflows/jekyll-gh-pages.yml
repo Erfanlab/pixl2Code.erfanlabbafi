@@ -29,10 +29,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: nx i
 
       - name: Build Nx app
-        run: npx nx build my-app --configuration=production
+        run: nx serve pixl2code --configuration:stage
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
