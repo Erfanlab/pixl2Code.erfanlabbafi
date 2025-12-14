@@ -32,7 +32,7 @@ jobs:
         run:  npm install
 
       - name: Build Nx app
-        run: nx serve pixl2code --configuration:stage
+        run: npx nx serve pixl2code --configuration:stage
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
