@@ -32,10 +32,8 @@ jobs:
         run:  npm install
 
       - name: Build Nx app
-        run: npx nx build pixl2code \
-          --configuration=stage \
-          --base-href=/pixl2code/ \
-          --deploy-url=/pixl2code/
+        run: npx nx build pixl2code --configuration=stage
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
