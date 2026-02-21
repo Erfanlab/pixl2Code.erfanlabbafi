@@ -9,7 +9,10 @@ import { SliderMenu } from "../slider-menu/slider-menu";
   selector: 'app-pixl2code-container',
   imports: [LostConection, ArowPager, TimeLoad, SliderMenu],
   templateUrl: './pixl2code-container.html', 
-  styleUrl: './pixl2code-container.css'
+  styleUrl: './pixl2code-container.css',
+  host:{
+    class : 'w-full h-full'
+  }
 })
 export class Pixl2codeContainer {
   
@@ -169,7 +172,7 @@ setItem(key : string , value: any){
   
   
   ngOnInit(){
-    const user = this.getItem<{ See: boolean }>('welcome-page');
+    const user = this.getItem<{ hidden: boolean }>('welcome-page');
 
 
 
@@ -180,7 +183,7 @@ setItem(key : string , value: any){
       },3000);
       setInterval(() => {
         this.loadpage.set( false )
-        this.setItem('welcome-page', { See: true });
+        this.setItem('welcome-page', { hidden: true });
       },6000);
       
     }else{
