@@ -12,23 +12,21 @@
   "targets": {
     "build": {
       "executor": "@angular/build:application",
-      "options": {
-        "browser": "src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
-        "tsConfig": "tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          {
-            "glob": "**/*",
-            "input": "public"
-          }
-        ],
-        "styles": [
-          "src/styles.scss"
-        ],
-        "outputPath": "dist/pixl2code"
+     "options": {
+  "browser": "src/main.ts",
+  "polyfills": ["zone.js"],
+  "tsConfig": "tsconfig.app.json",
+  "inlineStyleLanguage": "scss",
+  "assets": [
+    {
+      "glob": "**/*",
+      "input": "public"
+    }
+  ],
+  "styles": ["src/styles.scss"],
+  "outputPath": "dist/pixl2code",
+  "baseHref": "/pixl2Code.erfanlabbafi/"
+}
       },
       "configurations": {
         "production": {
