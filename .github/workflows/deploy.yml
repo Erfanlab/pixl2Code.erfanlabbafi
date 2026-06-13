@@ -28,7 +28,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx nx build pixl2code --configuration production
+        run: npx nx build pixl2code --configuration production --base-href=/pixl2Code.erfanlabbafi/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
