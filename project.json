@@ -8,6 +8,7 @@
     "build": {
       "executor": "@angular/build:application",
       "options": {
+        "baseHref": "/pixl2Code.erfanlabbafi/",
         "browser": "src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "tsconfig.app.json",
