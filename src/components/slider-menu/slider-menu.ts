@@ -8,7 +8,7 @@ import { Component, input, output, ViewEncapsulation } from '@angular/core';
   encapsulation:ViewEncapsulation.None
 })
 export class SliderMenu {
-
+  action = output<void>();
   title = input.required<string>()
   imgUrl = input<string>('')
   descrioption = input.required<string>()

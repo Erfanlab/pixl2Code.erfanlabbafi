@@ -3,7 +3,7 @@
     <div class=" flex flex-col gap-2 relative">
         <div class=" absolute -right-20 p-5" (click)="next.emit()">next</div>
         <div class=" absolute -left-20 p-5" (click)="prev.emit()"> prev </div>
-        <div class=" font-bold text-lg text-center">
+        <div class=" font-bold text-lg text-center" (click)="action.emit()">
             {{title()}}
         </div>
         <div class=" text-md text-center">
