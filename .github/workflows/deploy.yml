@@ -28,7 +28,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/pixl2code
+          path: dist/pixl2code/browser
 
   deploy:
     needs: build
