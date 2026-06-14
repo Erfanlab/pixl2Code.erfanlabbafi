@@ -1,4 +1,4 @@
-import { Component, input, output, signal, ViewEncapsulation } from '@angular/core';
+import { Component, input, output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-slider-menu',

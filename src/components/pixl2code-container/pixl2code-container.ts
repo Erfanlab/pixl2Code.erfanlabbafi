@@ -32,83 +32,83 @@ export class Pixl2codeContainer {
       id:0,
       title:'learn HTML',
       description:'frist decription',
-      imgUrl:'/assets/appImg/html.png' 
+      imgUrl:'assets/appImg/html.png' 
     },
     {
       id:1,
       title:'learn CSS', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/css.png'
+      imgUrl:'assets/appImg/css.png'
 
     },
     {
       id:2,
       title:'learn angular', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/angular.png'
+      imgUrl:'assets/appImg/angular.png'
 
     },
     {
       id:3,
       title:'learn bootstrap', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/bootstrap.png'
+      imgUrl:'assets/appImg/bootstrap.png'
 
     },
     {
       id:4,
       title:'learn dribble', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/dribble.png'
+      imgUrl:'assets/appImg/dribble.png'
 
     },
     {
       id:5,
       title:'learn figma', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/figma.png'
+      imgUrl:'assets/appImg/figma.png'
 
     },
     {
       id:6,
       title:'learn git', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/git.png'
+      imgUrl:'assets/appImg/git.png'
 
     },
     {
       id:7,
       title:'learn github', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/github.png'
+      imgUrl:'assets/appImg/github.png'
 
     },
     {
       id:8,
       title:'learn html', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/html.png'
+      imgUrl:'assets/appImg/html.png'
 
     },
     {
       id:9,
       title:'learn react', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/react.png'
+      imgUrl:'assets/appImg/react.png'
 
     },
     {
       id:10,
       title:'learn typescript', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/typescript.png'
+      imgUrl:'assets/appImg/typescript.png'
 
     },
     {
       id:11,
       title:'learn ICON-VIP', 
       description:'frist decription',
-      imgUrl:'/assets/appImg/ICON-VIP.png'
+      imgUrl:'assets/appImg/ICON-VIP.png'
 
     }
   ])
