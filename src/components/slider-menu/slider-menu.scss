@@ -1,6 +1,6 @@
 .anime{
     overflow: hidden;
-    animation: identifier 2s;
+    animation: identifier 700ms;
 --target : -100%;
 }
 
@@ -10,11 +10,12 @@
     }
     100%{
         transform: translateX(var(--target));
+        opacity: 0;
     }
 }
 .anime-prev{
     overflow: hidden;
-    animation: identifier 2s;
+    animation: identifier 700ms;
     --target: 100%;
 }
 

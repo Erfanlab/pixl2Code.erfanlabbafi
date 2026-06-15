@@ -1,4 +1,4 @@
-import { Component, input, output, ViewEncapsulation } from '@angular/core';
+import { Component, effect, input, output, signal, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-slider-menu',
@@ -15,6 +15,7 @@ export class SliderMenu {
   classlists = input<string>('');
   next = output<void>();
   prev = output<void>();
+  loading = input(true)
 
 }
 

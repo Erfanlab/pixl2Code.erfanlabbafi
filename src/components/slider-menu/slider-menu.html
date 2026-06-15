@@ -1,13 +1,23 @@
-<div class="h-screen flex flex-col gap-1 justify-center items-center cursor-pointer {{classlists()}}">
-    <img src="{{imgUrl()}}" width="200" alt="">
+<div class=" relative flex justify-center items-center ">
+<div class=" absolute right-0 p-5 cursor-pointer" (click)="next.emit()">next</div>
+    <div class="h-screen flex flex-col gap-1 justify-center items-center cursor-pointer {{classlists()}}" (click)="action.emit()">
+@if(loading()){
+    <svg class=" animate-spin" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 12.4024C18 10.9918 17.503 9.62625 16.5963 8.54566C15.6896 7.46507 14.4311 6.73849 13.042 6.49352C11.6528 6.24856 10.2217 6.50087 9.0001 7.20614C7.77847 7.91142 6.84439 9.02457 6.3619 10.3501C5.87941 11.6756 5.87937 13.1287 6.36178 14.4543C6.84419 15.7798 7.77821 16.893 8.9998 17.5984" stroke="#4B6FFF" stroke-width="2"/>
+    </svg>  
+}@else {
+    <img src="{{imgUrl()}}" width="200"  (load)="onLoad()"
+  (error)="onError()"
+  [hidden]="loading()" alt="">
+}
     <div class=" flex flex-col gap-2 relative">
-        <div class=" absolute -right-20 p-5" (click)="next.emit()">next</div>
-        <div class=" absolute -left-20 p-5" (click)="prev.emit()"> prev </div>
-        <div class=" font-bold text-lg text-center" (click)="action.emit()">
+        <div class=" font-bold text-lg text-center" >
             {{title()}}
         </div>
         <div class=" text-md text-center">
             {{descrioption()}}
         </div>
     </div>
+    </div>
+<div class=" absolute left-0 p-5 cursor-pointer" (click)="prev.emit()"> prev </div>
 </div>
