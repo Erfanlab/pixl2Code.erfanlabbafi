@@ -152,6 +152,7 @@ prevSlider(){
       this.classList.set('none');
 
     }
+    
   }, 1000);
   }
 
